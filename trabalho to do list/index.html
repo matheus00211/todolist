@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link para o kit de ícones Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Minha To-Do List</h1>
+        <button id="toggle-theme">Trocar Tema</button> <!-- Botão para trocar tema -->
+    </header>
+    
+
+  <!-- Container principal da To-Do List -->
+  <section class="todo-container">
+    <!-- Botão para abrir o modal de adicionar nova tarefa -->
+    <button id="open-modal">Adicionar Tarefa</button>
+
+    <!-- Container para os status das tarefas -->
+    <div class="status-container">
+      <!-- Coluna de Tarefas -->
+      <div class="status" id="tarefas">
+        <h2>Tarefas</h2>
+        <ul id="lista-tarefas" class="lista" draggable="true"></ul>
+      </div>
+      <!-- Coluna Em Andamento -->
+      <div class="status" id="em-andamento">
+        <h2>Em Progresso</h2>
+        <ul id="lista-em-andamento" class="lista" draggable="true"></ul>
+      </div>
+      
+      <!-- Coluna Em Revisão -->
+      <div class="status" id="em-revisao">
+        <h2>Em Revisão</h2>
+        <ul id="lista-em-revisao" class="lista" draggable="true"></ul>
+      </div>
+      <!-- Coluna Concluído -->
+      <div class="status" id="concluido">
+        <h2>Concluído</h2>
+        <ul id="lista-concluido" class="lista" draggable="true"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para Adicionar Nova Tarefa -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Nova Tarefa</h2>
+      <input type="text" id="nova-tarefa" placeholder="Digite sua tarefa...">
+      <label for="data-entrega">Data de Entrega</label>
+      <input type="date" id="data-entrega" placeholder="Data de entrega">
+      <button id="adicionar-tarefa"><i class="fas fa-plus"></i> Adicionar</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Feito com por Matheus Nóbrega</p>
+  </footer>
+
+  <!-- Link para o arquivo JavaScript externo -->
+  <script src="script.js"></script>
+
+</body>
+</html>
